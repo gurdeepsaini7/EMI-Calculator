@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="css/oldstyle.css">
+    <link rel="stylesheet" href="css/newstyle.css">
+    <script src="https://kit.fontawesome.com/d2ea8c503b.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body id="backToTop">
+    <div class="cal display-flex">
+        <!-- google ad -->
+        <div class="ad-box1"></div>
+
+        <!-- Content Starts -->
+        <div class="content-container">
+                <!-- Header Starts -->
+                <div class="header display-flex justify-content-space-bet align-items-center">
+                    <div class="logo">
+                        <h3 class="mb-0">EMI Calculator</h3>
+                    </div>
+                
+                    <div class="menu">
+                        <ul class="menu-ul display-flex">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About</a></li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-button">
+                        <i class="fas fa-bars bar"></i>
+                        <i class="fas fa-times close"></i>
+                    </div>
+                </div>
+
+                <div class="calculator">
+                    <div class="content-container2">
+                        <p class="main-heading">EMI Calculator for Home Loan, Car Loan & Personal Loan in India</p>
+            
+                        <div class="tab">
+                            <ul class="display-flex p-0 m-0">
+                                <li class="home-loan"><a href="#">Home Loan</a></li>
+                                <li><a href="#" class="active-tab">Personal Loan</a></li>
+                                <li class="car-loan"><a href="#" >Car Loan</a></li>
+                            </ul>
+                        </div>
+            
+                        <div class="emi-cal">
+                            <div class="emi-item amount mb-5">
+                                <div class="heading display-flex justify-content-space-bet align-items-center">
+                                    <span>Personal Loan Amount</span>
+                                    <div class="right-input">
+                                        <div class="input-div display-flex">
+                                            <input type="text" value="7,50,000">
+                                            <span class="display-grid sign">
+                                                ₹
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="slidecontainer">
+                                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                </div>
+                                
+                                <div class="step-amount display-flex justify-content-space-bet">
+                                    <span class="tick">| <br> <span>0</span></span>
+                                    <span class="tick">| <br> <span>5L</span></span>
+                                    <span class="tick">| <br> <span>10L</span></span>
+                                    <span class="tick">| <br> <span>15L</span></span>
+                                    <span class="tick">| <br> <span>20L</span></span>
+                                    <span class="tick">| <br> <span>25L</span></span>
+                                    <span class="tick text-right">| <br> <span>30L</span></span>   
+                                </div>
+                            </div>
+            
+                            <div class="emi-item i-rate mb-5">
+                                <div class="heading display-flex justify-content-space-bet align-items-center">
+                                    <span>Interest Rate</span>
+                                    <div class="right-input">
+                                        <div class="input-div display-flex">
+                                            <input type="text" value="11">
+                                            <span class="display-grid sign">
+                                                %
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="slidecontainer">
+                                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                </div>
+
+                                <div class="step-amount display-flex justify-content-space-bet">
+                                    <span class="tick">| <br> <span>5</span></span>
+                                    <span class="tick">| <br> <span>7.5</span></span>
+                                    <span class="tick">| <br> <span>10</span></span>
+                                    <span class="tick">| <br> <span>12.5</span></span>
+                                    <span class="tick">| <br> <span>15</span></span>
+                                    <span class="tick">| <br> <span>17.5</span></span>
+                                    <span class="tick">| <br> <span>20</span></span>
+                                    <span class="tick">| <br> <span>22.5</span></span>
+                                    <span class="tick text-right">| <br> <span>25</span></span>   
+                                </div>
+                            </div>
+            
+                            <div class="emi-item tenure">
+                                <div class="heading display-flex justify-content-space-bet align-items-center">
+                                    <span>Loan Tenure</span>
+                                    <div class="right-input">
+                                        <div class="input-div display-flex inputw2span">
+                                            <input type="text" value="3">
+                                            <span class="display-grid">
+                                                <a href="#" class="active-tenure-pr">Yr</a>
+                                            </span>
+                                            <span class="display-grid">
+                                                <a href="#">Mo</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="slidecontainer">
+                                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                </div>
+
+                                <div class="step-amount display-flex justify-content-space-bet">
+                                    <span class="tick">| <br> <span>0</span></span>
+                                    <span class="tick">| <br> <span>1</span></span>
+                                    <span class="tick">| <br> <span>2</span></span>
+                                    <span class="tick">| <br> <span>3</span></span>
+                                    <span class="tick">| <br> <span>4</span></span>
+                                    <span class="tick">| <br> <span>5</span></span>
+                                </div>
+                            </div>
+            
+                            <div class="result display-flex">
+                                <div class="left-totalcal">
+                                    <div class="item border-bt">
+                                        <p>Loan EMI</p>
+                                        <span>₹ 24,554</span>
+                                    </div>
+            
+                                    <div class="item border-bt">
+                                        <p>Total Interest Payable</p>
+                                        <span>₹ 1,33,945</span>
+                                    </div>
+            
+                                    <div class="item border-bt3">
+                                        <p>Total Payment <br> (Principal + Interest)</p>
+                                        <span>₹ 8,83,945</span>
+                                    </div>
+                                </div>
+            
+                                <div class="right-chart">
+                                    <figure class="highcharts-figure">
+                                        <div id="container"></div>
+                                        <!-- <p class="highcharts-description">
+                                            This pie chart shows how the chart legend can be used to provide
+                                            information about the individual slices.
+                                        </p> -->
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+
+                <!-- Footer Starts -->
+                <footer class="fix-footerhome">
+                    <div class="footer-txt">
+                        <p>&copy; Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    </div>
+                </footer>
+        </div>
+
+        <!-- google ad -->
+        <div class="ad-box2"></div>
+
+        <!-- google ad -->
+        <!-- <div class="ad-box3"></div> -->
+    </div>
+
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

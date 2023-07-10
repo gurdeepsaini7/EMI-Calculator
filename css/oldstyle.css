@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+html{
+    font-size: 15px;
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #eff0fa;
+}
+
+:root{
+    --dark-blue: #3e5fce;
+    --hover-blue: #5e81f4;
+    --light-blue: rgb(94 129 244 / 16%);
+}
+
+/* Common Properties */
+
+.display-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.justify-content-space-bet{
+    justify-content: space-between;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.display-grid{
+    display: grid;
+    place-items: center;
+}
+
+/* Header Starts */
+
+.header{
+    background-color: #fff;
+    z-index: 999;
+    min-height: 55px;
+    width: 100%;
+    padding: 0 1.5rem;
+    box-shadow: 0px 2px 5px rgba(127, 137, 161, 0.1);
+    /* margin-bottom: 1rem; */
+    position: sticky;
+    top: 0;
+}
+
+.logo img{
+   width: 7rem;
+}
+
+.header .menu ul li{
+    list-style: none;
+}
+
+.header .menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.15rem;
+    transition: 0.2s;
+}
+
+.header .menu ul li a:hover{
+    color: var(--dark-blue);
+}
+
+.header .menu .menu-ul li{
+    margin-left: 3rem;
+}
+
+.header .menu .menu-ul .dropdown-li a i{
+    color: black;
+    font-size: 14px;
+    margin-right: 5px;
+    transition: 0.2s;
+}
+
+.header .menu .menu-ul .dropdown-li a:hover i{
+    color: var(--dark-blue);
+}
+
+.dropdown-li{
+    position: relative;
+}
+
+.dropdown-ul{
+    position: absolute;
+    top: calc(100% + 1.5rem);
+    left: -2.5rem;
+    width: 10rem;
+    padding: 0.8rem 1rem;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s linear;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    z-index: 999;
+}
+
+.dropdown-li:hover .dropdown-ul{
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-top: -1rem;
+}
+
+.dropdown-ul li{
+    margin-left: 0 !important;  
+}
+
+.dropdown-ul li a{
+    display: block;
+    width: 100%;
+    padding: 5px 8px;
+}
+/* end */
+
+
+/* Google ad */
+
+/* .ad-box3{
+    width: 100%;
+    height: 20vh;
+    padding: 1rem;
+} */
+/* end */
+
+/* About Page */
+.about, .contact{
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    width: 90%;
+    margin: 0 auto;
+}
+
+.about h1, .contact h1{
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+.about p, .contact .text{
+    color: #333333;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.3px;
+    text-align: justify;
+    margin-top: 0.8rem;
+}
+
+.about h2{
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+}
+
+.about button{
+    margin: 0 auto;
+    display: block;
+    margin-top: 1.5rem;
+}
+/* end */
+
+/* Contact Page */
+
+.contact .text {
+    margin-bottom: 1rem;
+}
+
+.contact a{
+    display: block;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+}
+
+.contact a i{
+    width: 1rem;
+    text-align: center;
+    margin-right: 0.8rem;
+    color: var(--dark-blue);
+    transition: 0.2s;
+    font-size: 17px;
+}
+
+.contact a i:hover{
+    color: var(--hover-blue);
+}
+
+ul, h1{
+    margin-bottom: 0 !important;
+}
+/* end */
+
+/* Back to top button starts here */
+
+.backToTop{
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    margin-bottom: 1rem;
+}
+
+.backToTop i{
+    margin-left: 7px;
+}
+/* end */
+
+/* Footer Starts */
+
+footer{
+    width: 100%;
+}
+
+.footer-txt{
+    background-color: var(--hover-blue);
+    padding: 2.5rem 0;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+
+.footer-txt p{
+    margin-bottom: 0;
+}
+
+.fix-footer{
+    /* position: fixed;
+    left: 0;
+    bottom: 0; */
+    width: 100%;
+}
+
+.fix-footerabout{
+    position: fixed;
+    
+    bottom: 0;
+    width: 1150px;
+}
+/* Footer end */
+
+#gotodetail{
+    display: none;
+}
+
+.content-items{
+    padding-bottom: 8rem;
+}
+
+.about-page, .contact-page{
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 11rem;
+    overflow: auto;
+}
+
+
+.td-input2{
+    display: none;
+}
+
+.menu-button{
+    display: none;
+    position: relative;
+    z-index: 1000;
+}
+
+.menu-button i{
+    color: var(--dark-blue);
+    font-size: 20px;
+}
+
+.menu-button i.bar{
+    display: none;
+}
+
+.menu-button i.close{
+    display: none;
+}
+
+.default-btn {
+    border: 0;
+    height: 38px;
+    padding: 0 20px;
+    transition: 0.2s;
+    background-color: var(--dark-blue);
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.default-btn:hover{
+    background-color: var(--hover-blue);
+}
+
+/* Media Query Starts Here */
+@media only screen and (max-width:1580px){
+    .left-item {
+        width: 80%;
+    }
+
+    .todo-li-data h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        max-width: 166px;
+
+    }
+
+    .td-input {
+        width: 20%;
+    }
+
+    .button {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width:1450px){
+    
+    .todo-list {
+        width: 29%;
+    }
+
+    .todo-content {
+        width: 71%;
+    }
+
+    .content-item span {
+        width: 91%;
+    }
+
+    .item-textbox .input-wicon {
+        width: 73%;
+    }
+
+    .td-input {
+        width: 24%;
+    }
+
+    .about-page, .contact-page{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:1250px){
+    /* .ad-box1, .ad-box2 {
+        width: 12%;
+    } */
+
+    /* .ad-box3 {
+        height: 15vh;
+    } */
+
+    .header .menu .menu-ul li {
+        margin-left: 2rem;
+    }
+    
+    .dropdown-ul {
+        left: -1.5rem;
+        width: 9rem;
+    }
+}
+
+@media only screen and (max-width:1170px){
+    .fixWbtn button {
+        width: 90px;
+        height: 35px;
+        padding: 0 12px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width:1120px){
+
+    .todo-content {
+        width: 68%;
+    }
+
+    .todo-list {
+        width: 32%;
+    }
+
+    .header .menu .menu-ul li {
+        margin-left: 1.5rem;
+    }
+
+    .header .menu .menu-ul > li > a{
+        font-size: 1.08rem !important;
+    }
+
+    .dropdown-ul li a {
+        padding: 3px 0px;
+        font-size: 1rem !important;
+    }
+
+    .dropdown-ul{
+        padding: 0.6rem 0.8rem;
+        left: -0.8rem;
+        width: 8rem;
+    }
+
+    .td-input {
+        width: 27%;
+    }
+
+    .about-page , .contact-page{
+        width: 100%;
+    }
+
+    .content-item span {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:1040px){
+    .left-item {
+        width: 77%;
+    }
+
+    .content-item span {
+        width: 88%;
+    }
+}
+
+@media only screen and (max-width:1000px){
+    /* .ad-box1, .ad-box2, .ad-box3 {
+        display: none;
+    } */
+
+    .footer-txt {
+        padding: 2rem 0;
+    }
+
+    .content-items {
+        padding-bottom: 8rem;
+    }
+
+    .about-page, .contact-page{
+        padding-bottom: 9rem;
+    }
+}
+
+@media only screen and (max-width:768px){
+
+    .fix-footerhome {
+        width: 100%;
+        position: relative;
+    }
+
+    .footer-txt {
+        padding: 2rem 0;
+    }
+
+    #gotodetail{
+        display: block;
+    }
+/*     
+    .content-container{
+        position: relative;
+    } */
+
+    /* .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+    } */
+
+    .todo-list{
+        padding-top: 70px;
+        width: 100%;
+    }
+
+    .content-items{
+        padding-top: 1.8rem;
+        padding-bottom: 0;
+    }
+
+    .todo-content {
+        width: 100%;
+        height: max-content;
+        overflow: initial;
+    }
+
+    .button {
+        width: 16%;
+    }
+
+    .left-item {
+        width: 84%;
+    }
+
+    .td-input {
+        width: 24%;
+    }
+
+    .content-item span {
+        width: 90%;
+    }
+
+    .todo-li-data h2{
+        max-width: 85%;
+    }
+
+    .backToTop {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* .about, .contact{
+        margin-top: 6rem;
+    } */
+
+    body{
+        background-color: #f5f5fa !important;
+    }
+}
+
+@media only screen and (max-width:650px){
+    .left-item {
+        width: 81%;
+    }
+
+    .button {
+        width: 19%;
+    }
+
+    .td-input {
+        width: 26%;
+    }
+
+    .content-item span {
+        width: 89%;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .left-item1 {
+        width: 100%;
+    }
+
+    .button1 {
+        width: 100%;
+        text-align: left;
+    }
+
+    .display-none{
+        display: none;
+    }
+
+    .td-input2{
+        display: inline-block;
+        margin-right: 1rem;
+        width: 29%;
+    }
+
+    .item-textbox .input-wicon {
+        width: 100%;
+        margin-bottom: 10px;
+    }    
+}
+
+@media only screen and (max-width:550px){
+    .left-item2 {
+        width: 75%;
+    }
+
+    .button2 {
+        width: 25%;
+    }
+
+    .content-item span {
+        width: 87%;
+    }
+}
+
+@media only screen and (max-width:520px){
+    .header .menu .menu-ul li {
+        margin-left: 1rem;
+    }
+
+    .header .menu .menu-ul > li > a {
+        font-size: 1rem !important;
+    }
+
+    .dropdown-ul {
+        left: -0.5rem;
+        width: 7.2rem;
+    }
+
+    .menu-ul{
+        padding-left: 0;
+    }
+
+    .content-item span {
+        width: 86%;
+    }
+}
+
+@media only screen and (max-width:425px){
+    html{
+        font-size: 14px;
+    }
+
+    .left-item2 {
+        width: 70%;
+    }
+
+    .button2 {
+        width: 30%;
+    }
+
+    .content-item span {
+        width: 85%;
+        font-size: 16px;
+    }
+
+    .content-item input[type="checkbox"] {
+        width: 1.1rem;
+        height: 1.1rem;
+        top: 4px;
+    }
+
+    .content-item i {
+        font-size: 1rem;
+    }
+    
+    .about p, .contact .text {
+        color: #333333;
+        font-size: 15px;
+    }
+
+    .contact a{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .todo-li-data h2 {
+        font-size: 17px;
+        margin-bottom: 3px;
+    }
+
+    .titlem0{
+        margin-bottom: 0;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .logo{
+        position: relative;
+        z-index: 1000;
+    }
+
+    .active-menu .menu{
+        position: absolute;
+        inset: 0;
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        height: 100vh !important;
+        z-index: 999;
+        display: flex;
+    }
+
+    .active-menu .menu .menu-ul{
+        flex-direction: column;
+        margin-top: 4rem;
+        border-top: 1px solid var(--dark-blue);
+        width: 100%;
+    }
+
+    .active-menu .menu .menu-ul > li{
+        margin: 0;
+        border-bottom: 1px solid var(--light-blue);
+    }
+
+    .active-menu .menu .menu-ul > li > a{
+        font-size: 17px !important;
+        display: block;
+        padding: 10px 0 10px 1.6rem !important;
+    }
+
+    .menu-button{
+        display: block;
+    }
+
+    .menu-button i.bar{
+        display: block;
+    }
+
+    .active-menu .menu-button i.bar{
+        display: none;
+    }
+
+    .active-menu .menu-button i.close{
+        display: block;
+    }
+
+    .active-menu .menu .menu-ul .dropdown-li > a > i{
+       display: none;
+    }
+
+    .dropdown-ul {
+        width: 100%;
+        position: initial;
+        visibility: visible;
+        opacity: 1;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .dropdown-ul li{
+        text-align: left !important;
+        border-top: 1px solid var(--light-blue);
+    }
+
+    .dropdown-ul li a {
+        padding: 10px 0 10px 2.5rem !important;
+        font-size: 16px !important;
+    }
+
+    .dropdown-li:hover .dropdown-ul{
+        margin-top: 0;
+    }
+    
+
+    .td-input2 {
+        width: 40%;
+    }
+
+    .footer-txt{
+        font-size: 13px;
+    }
+
+    .hideScrolllbar{
+        overflow: hidden !important;
+    }
+}
+
+@media only screen and (max-width:375px){
+    .content-item span {
+        width: 83%;
+        font-size: 15px;
+    }
+
+    .content-item input[type="checkbox"] {
+        width: 1.1rem;
+        height: 1.1rem;
+        top: 3px;
+    }
+}
+
+@media only screen and (max-width:360px){
+    .left-item2 {
+        width: 62%;
+    }
+
+    .button2 {
+        width: 38%;
+    }
+}
